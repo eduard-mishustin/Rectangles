@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Rectangles</string>
+
+    <!--TODO Используем одни стринги несколько раз-->
+
+    <string name="game_mode_1">По невозможности ходить</string>
+    <string name="game_mode_2">По очкам</string>
+
+    <string name="game_essence">Суть игры:</string>
+    <string name="game_essence_description">Игра заключается в том, чтобы забрать как можно большее пространство карты в
+        свои территории.
+    </string>
+    <string name="how_to_play_">Как играть:</string>
+    <string name="how_to_play_description_two_players">Два игрока ходят по очереди.</string>
+    <string name="how_to_play_description_draw">Игрок в свой ход должен нарисовать прямоугольник с теми числами, которые
+        у него выпали на костях, кости отображаются сверху экрана.
+    </string>
+    <string name="how_to_play_description_opportunity">Также необходимо учесть, что прямоугольник возможно нарисовать
+        только от своего, ранее созданного.
+    </string>
+    <string name="game_modes_and_find_winner">Режимы игры и определение победителя:</string>
+    <string name="game_mode_1_description">1. По невозможности ходить. Проигрывает тот, кто не может ходить.</string>
+    <string name="game_mode_2_description">2. По очкам. Игра заканчивается тогда, когда у одного из игроков закончилось
+        игровое пространство.
+    </string>
+
+    <string name="player_1">Игрок 1:</string>
+    <string name="name_player_1">Игрок 1</string>
+    <string name="player_2">Игрок 2:</string>
+    <string name="name_player_2">Игрок 2</string>
+
+    <string name="determinate_the_winner">Определение победителя:</string>
+
+    <string name="start">Старт</string>
+    <string name="play">Играть</string>
+    <string name="how_to_play">Как играть</string>
+    <string name="continue_game">Продолжить</string>
+    <string name="play_again">Начать заново</string>
+    <string name="surrender">Сдаться</string>
+    <string name="exit_to_menu">Выйти в меню</string>
+    <string name="draw">Ничья!</string>
+</resources>

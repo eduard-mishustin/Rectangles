@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:padding="6dp"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <LinearLayout
+                android:id="@+id/menu_initial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/menu_initial_start"
+                    style="@style/TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/menu_initial_info"
+                    style="@style/TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_to_play"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/menu_settings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/menu_settings_back"
+                    style="@style/ImageIcon"
+                    android:src="@drawable/ic_back"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/map_size"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="4dp"/>
+
+            <SeekBar
+                    android:layout_width="match_parent"
+                    android:paddingTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/colorPrimaryDark"
+                    android:max="100"
+                    android:id="@+id/map_size_seekBar"/>
+
+            <!--fixme Я не могу просто взять и достать текст из editText в диалоге, аргх-->
+            <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="4dp"
+                        android:text="@string/player_1"
+                        android:textColor="@color/textColor"/>
+
+                <EditText
+                        android:id="@+id/menu_settings_edit_text_player_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        android:ems="10"
+                        android:hint="@string/name_player_1"
+                        android:inputType="textPersonName"
+                        android:maxLength="14"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_weight="1"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="4dp"
+                        android:text="@string/player_2"
+                        android:textColor="@color/textColor"/>
+
+                <EditText
+                        android:id="@+id/menu_settings_edit_text_player_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        android:ems="10"
+                        android:hint="@string/name_player_2"
+                        android:inputType="textPersonName"
+                        android:maxLength="14"/>
+
+            </LinearLayout>-->
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/determinate_the_winner"/>
+
+            <RadioGroup
+                    android:id="@+id/menu_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <RadioButton
+                        android:id="@+id/menu_radio_mode_0"
+                        android:layout_width="wrap_content"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/game_mode_1"/>
+
+                <RadioButton
+                        android:id="@+id/menu_radio_mode_1"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="-8dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/game_mode_2"/>
+
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/menu_play"
+                    style="@style/TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/menu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/menu_info_back"
+                    style="@style/ImageIcon"
+                    app:srcCompat="@drawable/ic_back"/>
+
+            <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:textStyle="bold"
+                            android:paddingEnd="4dp"
+                            android:text="@string/game_essence"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/game_essence_description"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:textStyle="bold"
+                            android:paddingEnd="4dp"
+                            android:text="@string/how_to_play_"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/how_to_play_description_two_players"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/how_to_play_description_draw"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/how_to_play_description_opportunity"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:textStyle="bold"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/game_modes_and_find_winner"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/game_mode_1_description"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/game_mode_2_description"
+                            android:textColor="@color/textColor"
+                            android:textSize="16sp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/pause"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/pause_continue"
+                style="@style/TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/continue_game"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/pause_again"
+                style="@style/TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/play_again"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/pause_surrender"
+                style="@style/TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/surrender"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/pause_menu"
+                style="@style/TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exit_to_menu"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/end_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/end_again"
+                style="@style/TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/play_again"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/end_menu"
+                style="@style/TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exit_to_menu"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
